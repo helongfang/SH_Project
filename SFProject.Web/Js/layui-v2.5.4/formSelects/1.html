@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <title>formSelects-v4 多选</title>
+        <link rel="stylesheet" type="text/css" href="./formSelects-v4.css" />
+    </head>
+    <body>
+
+        
+        
+        <div>
+            <select name="city" xm-select="select1">
+                <option value="1" >北京</option>
+                <option value="2" >上海</option>
+                <option value="3" >广州</option>
+                <option value="4" >深圳</option>
+                <option value="5">天津</option>
+            </select>
+        </div>
+
+
+        <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="./layui.js" type="text/javascript" charset="utf-8"></script>
+         <script>
+         	layui.config({
+	        base: './' //此处路径请自行处理, 可以使用绝对路径
+	    }).extend({
+	        formSelects: 'formSelects-v4.min'
+	    });
+	    //加载模块
+	    layui.use(['jquery', 'formSelects'], function(){
+	        var formSelects = layui.formSelects;
+	        formSelects.value('select1', [4]);
+	         console.log(formSelects.value('select1'));  
+	    });
+         </script>
+         
+         
+    </body>
+</html>

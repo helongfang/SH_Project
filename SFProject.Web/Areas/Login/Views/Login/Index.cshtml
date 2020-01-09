@@ -1,0 +1,98 @@
+﻿
+@{
+    ViewBag.Title = "用户登录";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html class="loginHtml">
+<head>
+    <meta charset="utf-8">
+    <title>WSOMS</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="icon" href="~/Image/favicon.ico">
+    <link href="~/Css/LayoutCss/public.css" rel="stylesheet" />
+    <style>
+        .userAvatar {
+            width: 125px;
+            /* height: inherit; */
+            position: fixed;
+            top: 50px;
+            left: 50px;
+        }
+
+        .layui-block {
+            width: 100% !important;
+            font-size: 20px;
+            font-weight: 600;
+            background-color: #C22026;
+        }
+
+        .loginBody form.layui-form {
+            padding: 0 20px;
+            width: 300px;
+            height: 250px;
+            position: absolute;
+            left: 20%;
+            top: 55%;
+            margin: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            background: none;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            box-shadow: none;
+            transform: translate(-50%, -50%);
+        }
+        .main{
+            position:absolute;
+            top:24%;
+            left:19%;
+            transform:translate(-50%,-50%);
+            color:#fff;
+        }
+            .main h2 {
+                font-size: 35px;
+                font-style:italic;
+            }
+            .main p {
+                font-size: 18px;
+            }
+    </style>
+</head>
+
+<body class="loginBody loginBodyVideo">
+    @*<img src="" class="userAvatar">*@
+    <div class="main">
+     <h2>报价管理系统</h2>
+    </div>
+    <form class="layui-form">
+
+        @*<div class="login_face">
+            <img src="../../../../Image/logos.png" class="userAvatar">
+        </div>*@
+
+        <div class="layui-form-item input-item" id="pUserName">
+            @*<label for="userName">用户名</label>*@
+            <input type="text" placeholder="用户名" id="UserName" class="layui-input" lay-verify="required">
+        </div>
+        <div class="layui-form-item input-item" id="pPassword">
+            @*<label for="password">密码</label>*@
+            <input type="password" placeholder="密码" id="Password" class="layui-input" lay-verify="required">
+        </div>
+        <div class="layui-form-item"  style="text-align:center;">
+            <button class="layui-btn layui-btn-lg layui-btn-radius layui-btn-normal" style="width:80%" lay-filter="login" lay-submit>登 录</button>
+        </div>
+    </form>
+    <script src="~/Js/Login/Login.js"></script>
+    <script src="~/Js/LayoutJs/cache.js"></script>
+</body>
+</html>
